@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "module": "system",
+    "target": "es5",
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "sourceMap": true
+  },
+
+  "exclude": [
+    "app/jspm_packages",
+    "dist",
+    "typings",
+    "node_modules"
+  ]
+}
