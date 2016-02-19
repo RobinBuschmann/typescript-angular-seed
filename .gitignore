@@ -3,6 +3,7 @@
 
 # ide stuff
 .idea/
+.idea/**/*
 
 # lib/packages
 node_modules/
