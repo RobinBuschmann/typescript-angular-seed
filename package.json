@@ -1,16 +1,37 @@
 {
   "name": "typescript-angular-seed",
   "version": "1.1.1",
-  "description": "An Angular project written in typescript, modularized with system.js and jspm",
+  "description": "An angular project written in typescript, modularized with system.js and jspm",
   "scripts": {
-    "server:dev": "http-server -p 8100 -c-1 app/",
+    "bundle:tpl": "node_modules/ng-template-bundler/bin/ngtb modules/**/*.html -m ts-ng-seed -o templates.ts -b app -d ./app",
+    "bundle:js": "jspm bundle ./app/bootstrap.js ./dist/build.js --minify",
+    "bundle:index": "node_modules/usemin-cli/bin/usemin app/index.html -d dist > dist/index.html --noprocess true --htmlmin --bust",
+    "minify:css": "node_modules/clean-css/bin/cleancss dist/main.css -o dist/main.css",
     "compile:ts": "tsc",
-    "serve": "npm run compile:ts && npm run server:dev"
+    "compile:scss": "node-sass --include-path app/styles app/styles/main.scss app/styles/main.css",
+    "clean:dist": "rimraf dist",
+    "copy:css": "copyup app/styles/main.css dist -f",
+    "copy:config": "copyup app/config.js dist -f",
+    "copy:systemJsProd": "copyup app/jspm_packages/system-csp-production.js dist -f",
+    "copy:systemJsPolyFill": "copyup app/jspm_packages/system-polyfills.js dist -f",
+    "copy": "npm run copy:css & npm run copy:config & npm run copy:systemJsProd & npm run copy:systemJsPolyFill",
+    "build": "npm run bundle:tpl && npm run compile:ts && npm run compile:scss",
+    "build:prod": "npm run clean:dist && npm run build && npm run bundle:js && npm run bundle:index && npm run copy && npm run minify:css",
+    "server:dev": "http-server -p 8100 -c-1 app/",
+    "server:prod": "http-server -p 8100 -c-1 dist/",
+    "serve": "npm run build && npm run server:dev",
+    "serve:prod": "npm run build:prod && npm run server:prod"
   },
   "dependencies": {},
   "devDependencies": {
+    "clean-css": "^3.4.9",
+    "copyfiles": "^0.2.1",
     "jspm": "^0.16.29",
-    "typescript": "^1.7.5"
+    "ng-template-bundler": "git+https://github.com/RobinBuschmann/ng-template-bundler.git",
+    "node-sass": "^3.4.2",
+    "rimraf": "^2.5.2",
+    "typescript": "^1.7.5",
+    "usemin-cli": "git+https://github.com/RobinBuschmann/usemin-cli.git"
   },
   "jspm": {
     "directories": {
@@ -19,7 +40,8 @@
     "dependencies": {
       "angular": "github:angular/bower-angular@^1.5.0",
       "angular-ui-router": "github:angular-ui/ui-router@^0.2.18",
-      "at": "github:RobinBuschmann/angular-typescript@0.0.9"
+      "at": "github:RobinBuschmann/angular-typescript@0.0.9",
+      "bootstrap-sass": "github:twbs/bootstrap-sass@^3.3.6"
     },
     "devDependencies": {}
   }

@@ -13,6 +13,8 @@ import app from './app';
 import './components/AppComponent';
 import './components/NiceLabelComponent';
 
+// bundled templates
+import './templates';
 
 // After that, we can boot the entire application:
 

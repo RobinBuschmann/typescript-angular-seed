@@ -1,10 +1,10 @@
-///<reference path="../../../../typings/tsd.d.ts"/>
-///<reference path="../../../jspm_packages/github/RobinBuschmann/angular-typescript@0.0.10/src/at-angular.ts"/>
+///<reference path="../../../../../typings/tsd.d.ts"/>
+///<reference path="../../../../jspm_packages/github/RobinBuschmann/angular-typescript@0.0.10/src/at-angular.ts"/>
 
 import * as at from 'at';
-import userProfile from '../userProfile';
-import {UserProfileSettingsComponent} from "./UserProfileSettingsComponent";
-import {UserProfileInfoComponent} from "./UserProfileInfoComponent";
+import userProfile from '../../userProfile';
+import {UserProfileSettingsComponent} from "./../UserProfileSettingsComponent";
+import {UserProfileInfoComponent} from "./../userProfileInfo/UserProfileInfoComponent";
 
 /**
  * @ngdoc directive
@@ -14,12 +14,7 @@ import {UserProfileInfoComponent} from "./UserProfileInfoComponent";
 @at.Component({
   moduleName: userProfile.name,
   selector: 'userProfile',
-  template: `
-    <div ui-view="userProfile"></div>
-
-    <a ui-sref="userProfile.settings">settings</a>
-    <a ui-sref="userProfile.info">info</a>
-  `
+  templateUrl: 'modules/userProfile/components/userProfile/userProfileTpl.html'
 })
 @at.RouteConfig({
   module: userProfile,

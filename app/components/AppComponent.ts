@@ -3,7 +3,7 @@
 
 import * as at from 'at';
 import app from '../app'
-import {UserProfileComponent} from "../modules/userProfile/components/UserProfileComponent";
+import {UserProfileComponent} from "../modules/userProfile/components/userProfile/UserProfileComponent";
 import {HelloWorldComponent} from "./HelloWorldComponent";
 
 /**
