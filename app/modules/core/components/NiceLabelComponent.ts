@@ -1,8 +1,6 @@
-///<reference path="../../typings/tsd.d.ts"/>
-///<reference path="../jspm_packages/github/RobinBuschmann/angular-typescript@0.0.10/src/at-angular.ts"/>
 
 import * as at from 'at';
-import app from '../app'
+import {core} from "../core";
 
 /**
  * @ngdoc directive
@@ -12,8 +10,8 @@ import app from '../app'
  * @param {string} color Color for text
  */
 @at.Component({
-  moduleName: app.name,
-  selector: 'niceLabel',
+  moduleName: core.name,
+  componentName: 'niceLabel',
   template: `
     <span ng-transclude ng-style="{color: vm.color || 'blue'}">
     </span>

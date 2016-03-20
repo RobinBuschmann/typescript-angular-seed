@@ -1,10 +1,12 @@
 ///<reference path="../../typings/tsd.d.ts"/>
-///<reference path="../jspm_packages/github/RobinBuschmann/angular-typescript@0.0.10/src/at-angular.ts"/>
+///<reference path="../jspm_packages/github/RobinBuschmann/angular-typescript@0.0.15/dist/at-angular.d.ts"/>
 
 import * as at from 'at';
 import app from '../app'
 import {UserProfileComponent} from "../modules/userProfile/components/userProfile/UserProfileComponent";
-import {HelloWorldComponent} from "./HelloWorldComponent";
+import {HelloWorldComponent} from "../modules/core/components/HelloWorldComponent";
+
+import '../modules/core/components/NiceLabelComponent';
 
 /**
  * @ngdoc directive
@@ -13,7 +15,7 @@ import {HelloWorldComponent} from "./HelloWorldComponent";
  */
 @at.Component({
   moduleName: app.name,
-  selector: 'app',
+  componentName: 'app',
   template: `
     <div>
       <nice-label color="'#009688'">My incredible application</nice-label>

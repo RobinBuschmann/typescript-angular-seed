@@ -1,10 +1,10 @@
 ///<reference path="../../../typings/tsd.d.ts"/>
 
 import * as angular from 'angular';
+import {core} from "../core/core";
 import 'angular-ui-router';
 
-let userProfile = angular.module('ts-ion-seed.user-profile', [
-  'ui.router'
+export const userProfile = angular.module('ts-ng-seed.user-profile', [
+  core.name,
+  'ui.router',
 ]);
-
-export default userProfile;

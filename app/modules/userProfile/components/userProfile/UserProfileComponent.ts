@@ -1,10 +1,11 @@
 ///<reference path="../../../../../typings/tsd.d.ts"/>
-///<reference path="../../../../jspm_packages/github/RobinBuschmann/angular-typescript@0.0.10/src/at-angular.ts"/>
+///<reference path="../../../../jspm_packages/github/RobinBuschmann/angular-typescript@0.0.15/dist/at-angular.d.ts"/>
 
 import * as at from 'at';
-import userProfile from '../../userProfile';
+import {userProfile} from "../../userProfile";
 import {UserProfileSettingsComponent} from "./../UserProfileSettingsComponent";
 import {UserProfileInfoComponent} from "./../userProfileInfo/UserProfileInfoComponent";
+import {AppService} from "../../../core/services/AppService";
 
 /**
  * @ngdoc directive
@@ -13,7 +14,7 @@ import {UserProfileInfoComponent} from "./../userProfileInfo/UserProfileInfoComp
  */
 @at.Component({
   moduleName: userProfile.name,
-  selector: 'userProfile',
+  componentName: 'userProfile',
   templateUrl: 'modules/userProfile/components/userProfile/userProfileTpl.html'
 })
 @at.RouteConfig({
@@ -43,4 +44,10 @@ import {UserProfileInfoComponent} from "./../userProfileInfo/UserProfileInfoComp
 })
 export class UserProfileComponent {
 
+  appVersion: string;
+  
+  constructor(protected appService: AppService) {
+    
+    this.appVersion = appService.getAppVersion();
+  }
 }
