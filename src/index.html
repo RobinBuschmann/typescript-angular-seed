@@ -6,7 +6,7 @@
   <title></title>
 
   <!-- build:css main.css -->
-  <link href="styles/main.css" rel="stylesheet">
+  <link href="app/styles/main.css" rel="stylesheet">
   <!-- endbuild -->
 
 </head>
@@ -19,13 +19,13 @@
 <!-- endbuild -->
 <!-- build:js system-polyfills.js --><!-- endbuild -->
 
-<script src="config.js"></script>
+<!-- build:js config.js --><script src="config.js"></script><!-- endbuild -->
 
 <!-- build:js build.js --><!-- endbuild -->
 
 <script>
 
-  System.import('bootstrap')
+  System.import('app/bootstrap')
     .catch(function (err) {
       console.log(err);
     });

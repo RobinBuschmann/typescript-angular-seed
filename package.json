@@ -3,24 +3,27 @@
   "version": "1.1.1",
   "description": "An angular project written in typescript, modularized with system.js and jspm",
   "scripts": {
-    "bundle:tpl": "node_modules/ng-template-bundler/bin/ngtb modules/**/*.html -m ts-ng-seed -o templates.ts -b app -d ./app",
-    "bundle:js": "jspm bundle ./app/bootstrap.js ./dist/build.js --minify",
-    "bundle:index": "node_modules/usemin-cli/bin/usemin app/index.html -d dist > dist/index.html --noprocess true --htmlmin --bust",
+    "bundle:ts": "jspm bundle ./src/app/bootstrap ./dist/build.js --minify",
+    "bundle:index": "node_modules/usemin-cli/bin/usemin src/index.html -d dist > dist/index.html --noprocess true --htmlmin --bust",
     "minify:css": "node_modules/clean-css/bin/cleancss dist/main.css -o dist/main.css",
-    "compile:ts": "tsc",
-    "compile:scss": "node-sass --include-path app/styles app/styles/main.scss app/styles/main.css",
+    "compile:scss": "node-sass --include-path src/app/styles src/app/styles/main.scss src/app/styles/main.css",
     "clean:dist": "rimraf dist",
-    "copy:css": "copyup app/styles/main.css dist -f",
-    "copy:config": "copyup app/config.js dist -f",
-    "copy:systemJsProd": "copyup app/jspm_packages/system-csp-production.js dist -f",
-    "copy:systemJsPolyFill": "copyup app/jspm_packages/system-polyfills.js dist -f",
-    "copy": "npm run copy:css & npm run copy:config & npm run copy:systemJsProd & npm run copy:systemJsPolyFill",
-    "build": "npm run bundle:tpl && npm run compile:ts && npm run compile:scss",
-    "build:prod": "npm run clean:dist && npm run build && npm run bundle:js && npm run bundle:index && npm run copy && npm run minify:css",
-    "server:dev": "http-server -p 8100 -c-1 app/",
+    "ngconfig:dev": "ngconfig config.dev.json src/app/modules/core/config/config.ts -m ts-ng-seed.core -x -i ../core",
+    "ngconfig:prod": "ngconfig config.prod.json src/app/modules/core/config/config.ts -m ts-ng-seed.core -x -i ../core",
+    "copy:css": "copyup src/app/styles/main.css dist -f",
+    "copy:images": "copyup src/**/*.svg src/**/*.png src/**/*.jpg src/**/*.jpeg src/**/*.gif dist",
+    "copy:fonts": "copyup src/**/*.eot src/**/*.svg src/**/*.ttf src/**/*.woff src/**/*.woff2 dist",
+    "copy:config": "copyup src/config.js dist -f",
+    "copy:src": "cp -a ./src/ ./dist/src/",
+    "copy:systemJsProd": "copyup src/jspm_packages/system-csp-production.js dist -f",
+    "copy:systemJsPolyFill": "copyup src/jspm_packages/system-polyfills.js dist -f",
+    "copy": "npm run copy:css & npm run copy:config & npm run copy:systemJsProd & npm run copy:systemJsPolyFill & npm run copy:images & npm run copy:fonts",
+    "build": "npm run ngconfig:dev & npm run compile:scss",
+    "build:prod": "npm run ngconfig:prod && npm run clean:dist && npm run build && npm run bundle:ts && npm run bundle:index && npm run copy && npm run minify:css",
+    "server:dev": "http-server -p 8100 -c-1 src/",
     "server:prod": "http-server -p 8100 -c-1 dist/",
     "serve": "npm run build && npm run server:dev",
-    "serve:prod": "npm run build:prod && npm run server:prod"
+    "serve:prod": "npm run build:prod && npm run copy:src && npm run server:prod"
   },
   "dependencies": {},
   "devDependencies": {
@@ -28,6 +31,7 @@
     "copyfiles": "^0.2.1",
     "jspm": "^0.16.29",
     "ng-template-bundler": "git+https://github.com/RobinBuschmann/ng-template-bundler.git",
+    "ngconfig-cli": "git+https://github.com/RobinBuschmann/ngconfig-cli.git",
     "node-sass": "^3.4.2",
     "rimraf": "^2.5.2",
     "typescript": "^1.7.5",
@@ -35,14 +39,19 @@
   },
   "jspm": {
     "directories": {
-      "baseURL": "app"
+      "baseURL": "src"
     },
     "dependencies": {
       "angular": "github:angular/bower-angular@^1.5.0",
       "angular-ui-router": "github:angular-ui/ui-router@^0.2.18",
       "at": "github:RobinBuschmann/angular-typescript@^0.0.15",
-      "bootstrap-sass": "github:twbs/bootstrap-sass@^3.3.6"
+      "bootstrap-sass": "github:twbs/bootstrap-sass@^3.3.6",
+      "ng-template": "npm:plugin-ng-template@^0.1.1",
+      "ts": "github:frankwallis/plugin-typescript@^4.0.2",
+      "typescript": "npm:typescript@^1.8.9"
     },
-    "devDependencies": {}
+    "devDependencies": {
+      "ts-runtime": "npm:babel-runtime@^5.8.24"
+    }
   }
 }

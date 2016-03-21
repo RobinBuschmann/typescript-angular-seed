@@ -1,0 +1,6 @@
+{
+  "env": {
+    "name": "development",
+    "apiEndpoint": "http://localhost:9000"
+  }
+}

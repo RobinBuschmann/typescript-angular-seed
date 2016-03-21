@@ -1,11 +1,11 @@
 import * as angular from 'angular';
 import app from './app';
 
+// load app configuration
+import './modules/core/config/config';
+
 // initial component
 import './components/AppComponent';
-
-// bundled templates
-import './templates';
 
 // boot application
 angular.element(document).ready(() =>

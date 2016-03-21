@@ -1,11 +1,12 @@
 ///<reference path="../../../../../typings/tsd.d.ts"/>
-///<reference path="../../../../jspm_packages/github/RobinBuschmann/angular-typescript@0.0.15/dist/at-angular.d.ts"/>
+///<reference path="../../../../../jspm_packages/github/RobinBuschmann/angular-typescript@0.0.15/dist/at-angular.d.ts"/>
 
 import * as at from 'at';
 import {userProfile} from "../../userProfile";
 import {UserProfileSettingsComponent} from "./../UserProfileSettingsComponent";
 import {UserProfileInfoComponent} from "./../userProfileInfo/UserProfileInfoComponent";
 import {AppService} from "../../../core/services/AppService";
+import template from "./userProfileTpl.html!ng-template";
 
 /**
  * @ngdoc directive
@@ -15,7 +16,7 @@ import {AppService} from "../../../core/services/AppService";
 @at.Component({
   moduleName: userProfile.name,
   componentName: 'userProfile',
-  templateUrl: 'modules/userProfile/components/userProfile/userProfileTpl.html'
+  templateUrl: template.templateUrl
 })
 @at.RouteConfig({
   module: userProfile,
@@ -42,12 +43,13 @@ import {AppService} from "../../../core/services/AppService";
     {when: '/userProfile', then: '/userProfile/info'}
   ]
 })
+@at.Inject('appService')
 export class UserProfileComponent {
 
   appVersion: string;
-  
+
   constructor(protected appService: AppService) {
-    
+
     this.appVersion = appService.getAppVersion();
   }
 }

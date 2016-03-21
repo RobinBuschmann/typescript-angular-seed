@@ -4,10 +4,10 @@ import {core} from "../core";
 export class AppService {
 
   private APP_VERSION = 'test';
-  
+
   getAppVersion() {
-    
+
     return this.APP_VERSION;
   }
-  
+
 }

@@ -11,7 +11,9 @@ import {core} from "../core";
   moduleName: core.name,
   componentName: 'helloWorld',
   template: `
-    Hello world!
+    <div class="container">
+      Hello world!
+    </div>
   `
 })
 export class HelloWorldComponent {}

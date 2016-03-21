@@ -7,15 +7,14 @@
 
 # lib/packages
 node_modules/
-app/jspm_packages/
-typings/
+src/jspm_packages/
+src/typings/
 
 # app data
 **/*.js
 **/*.js.map
-!app/config.js
+!src/config.js
 **/*.css
-templates.ts
 
 # build dir
 dist/**/*
