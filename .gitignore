@@ -13,6 +13,7 @@ src/typings/
 # app data
 **/*.js
 **/*.js.map
+src/app/modules/core/config/config.ts
 !src/config.js
 **/*.css
 

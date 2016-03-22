@@ -15,7 +15,7 @@ import {userProfile} from "../userProfile";
   moduleName: userProfile.name,
   componentName: 'userProfileSettings',
   template: `
-    yeah, user profile settings for "{{vm.userName}}"!
+     yeah, user profile settings for "{{vm.userName}}"!
   `
 })
 export class UserProfileSettingsComponent {

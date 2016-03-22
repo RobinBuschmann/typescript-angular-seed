@@ -1,6 +1,5 @@
 ///<reference path="../../typings/tsd.d.ts"/>
 ///<reference path="../../jspm_packages/github/RobinBuschmann/angular-typescript@0.0.15/dist/at-angular.d.ts"/>
-///<reference path="../modules/core/config/config.d.ts"/>
 
 import * as at from 'at';
 import app from '../app'
@@ -9,6 +8,7 @@ import {HelloWorldComponent} from "../modules/core/components/HelloWorldComponen
 
 // import components, that will be used in the current one
 import '../modules/core/components/NiceLabelComponent';
+import {env} from "../modules/core/config/config";
 
 
 /**
@@ -58,8 +58,8 @@ import '../modules/core/components/NiceLabelComponent';
 @at.Inject('env')
 export class AppComponent {
 
-  constructor(protected env: config.IENV) {
+  constructor(protected _env: typeof env) {
 
-    console.log('env: ' + env.name);
+    console.log('ENV: ' + _env.name);
   }
 }
