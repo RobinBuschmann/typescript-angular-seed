@@ -24,7 +24,7 @@ import {AppService} from "../../../core/services/AppService";
       name: 'userProfile.settings',
       url: '/settings',
       views: {
-        userProfile: {
+        userProfileSettings: {
           component: UserProfileSettingsComponent,
           resolve: {
             userName: () => 'Elisa'
@@ -35,7 +35,7 @@ import {AppService} from "../../../core/services/AppService";
     {
       name: 'userProfile.info',
       url: '/info',
-      views: {userProfile: {component: UserProfileInfoComponent}}
+      views: {userProfileInfo: {component: UserProfileInfoComponent}}
     }
   ],
   conditions: [

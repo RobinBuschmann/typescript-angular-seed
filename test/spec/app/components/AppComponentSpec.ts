@@ -16,7 +16,7 @@ describe('AppComponent', () => {
     System.import('app/bootstrap')
       .then(function () {
 
-        angular.mock.module('ts-ng-seed');
+        angular.mock.module('ts-ion-seed');
 
         done();
       });

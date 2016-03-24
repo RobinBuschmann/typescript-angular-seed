@@ -15,7 +15,12 @@ import {userProfile} from "../userProfile";
   moduleName: userProfile.name,
   componentName: 'userProfileSettings',
   template: `
-     yeah, user profile settings for "{{vm.userName}}"!
+     <ion-view>
+      <ion-content class="has-header">
+         yeah, user profile settings for "{{vm.userName}}"!
+      </ion-content>
+    </ion-view>
+
   `
 })
 export class UserProfileSettingsComponent {

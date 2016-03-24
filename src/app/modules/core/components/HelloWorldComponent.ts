@@ -11,9 +11,11 @@ import {core} from "../core";
   moduleName: core.name,
   componentName: 'helloWorld',
   template: `
-    <div class="container">
-      Hello world!
-    </div>
+    <ion-view>
+      <ion-content class="has-header">
+          Hello world!
+        </ion-content>
+    </ion-view>
   `
 })
 export class HelloWorldComponent {}

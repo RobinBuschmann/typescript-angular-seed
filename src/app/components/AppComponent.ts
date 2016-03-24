@@ -22,21 +22,41 @@ import {env} from "../modules/core/config/config";
   componentName: 'app',
   template: `
 
-    <nav class="navbar navbar-inverse">
-      <div class="container">
-        <div class="navbar-header">
-          <a class="navbar-brand" href="#"><nice-label color="'#009688'">My incredible application</nice-label></a>
-        </div>
-        <div id="navbar">
-          <ul class="nav navbar-nav">
-            <li><a ui-sref="home" ui-sref-active="active">Home</a></li>
-            <li><a ui-sref="userProfile" ui-sref-active="active">UserProfile</a></li>
-          </ul>
-        </div>
-      </div>
-    </nav>
+    <ion-side-menus>
+      <!-- Left menu -->
+      <ion-side-menu side="left">
+        <ion-header-bar class="bar-dark">
+            <h1 class="title">
+              <nice-label color="'#009688'">My incredible application</nice-label>
+            </h1>
+          </ion-header-bar>
+          <ion-content>
+            <ion-list>
+              <ion-item ui-sref="home" menu-close>
+                Home
+              </ion-item>
+              <ion-item ui-sref="userProfile" menu-close>
+                UserProfile
+              </ion-item>
+            </ion-list>
+          </ion-content>
+        </ion-side-menu>
+      </ion-side-menu>
+      
+      <ion-side-menu-content>
+          <ion-nav-bar class="bar-dark">
+            <ion-nav-back-button>
+            </ion-nav-back-button>
+      
+            <ion-nav-buttons side="left">
+              <button class="button button-icon button-clear ion-android-more-vertical" menu-toggle="left">
+              </button>
+            </ion-nav-buttons>
+          </ion-nav-bar>
+        <ion-nav-view name="main"></ion-nav-view>
+      </ion-side-menu-content>
     
-    <div ui-view="main"></div>
+    </ion-side-menus>
   `
 })
 @at.RouteConfig({
@@ -55,11 +75,16 @@ import {env} from "../modules/core/config/config";
   ],
   otherwise: '/'
 })
-@at.Inject('env')
+@at.Inject('$ionicSideMenuDelegate', 'env')
 export class AppComponent {
 
-  constructor(protected _env: typeof env) {
+  constructor(protected $ionicSideMenuDelegate: ionic.sideMenu.IonicSideMenuDelegate,
+              protected _env: typeof env) {
 
     console.log('ENV: ' + _env.name);
+  }
+
+  toggleMenu() {
+    this.$ionicSideMenuDelegate.toggleLeft(true);
   }
 }

@@ -37,16 +37,32 @@ System.config({
     "angular-mocks": "github:angular/bower-angular-mocks@1.5.2",
     "angular-ui-router": "github:angular-ui/ui-router@0.2.18",
     "at": "github:RobinBuschmann/angular-typescript@0.0.15",
-    "bootstrap-sass": "github:twbs/bootstrap-sass@3.3.6",
+    "ionic": "github:driftyco/ionic-bower@1.2.4",
     "ng-template": "npm:plugin-ng-template@0.1.1",
     "ts": "github:frankwallis/plugin-typescript@4.0.2",
     "ts-runtime": "npm:babel-runtime@5.8.35",
     "typescript": "npm:typescript@1.8.9",
+    "github:angular-ui/ui-router@0.2.13": {
+      "angular": "github:angular/bower-angular@1.5.2"
+    },
     "github:angular-ui/ui-router@0.2.18": {
+      "angular": "github:angular/bower-angular@1.5.2"
+    },
+    "github:angular/bower-angular-animate@1.5.2": {
       "angular": "github:angular/bower-angular@1.5.2"
     },
     "github:angular/bower-angular-mocks@1.5.2": {
       "angular": "github:angular/bower-angular@1.5.2"
+    },
+    "github:angular/bower-angular-sanitize@1.5.2": {
+      "angular": "github:angular/bower-angular@1.5.2"
+    },
+    "github:driftyco/ionic-bower@1.2.4": {
+      "angular": "github:angular/bower-angular@1.5.2",
+      "angular-animate": "github:angular/bower-angular-animate@1.5.2",
+      "angular-sanitize": "github:angular/bower-angular-sanitize@1.5.2",
+      "angular-ui-router": "github:angular-ui/ui-router@0.2.13",
+      "css": "github:systemjs/plugin-css@0.1.20"
     },
     "github:frankwallis/plugin-typescript@4.0.2": {
       "typescript": "npm:typescript@1.8.9"

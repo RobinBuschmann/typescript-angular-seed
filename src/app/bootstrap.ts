@@ -1,4 +1,5 @@
 import * as angular from 'angular';
+import 'ionic';
 import app from './app';
 
 // load app configuration

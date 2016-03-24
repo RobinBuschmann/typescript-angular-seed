@@ -6,16 +6,19 @@
   "bundle": "typings/tsd.d.ts",
   "installed": {
     "angularjs/angular.d.ts": {
-      "commit": "95b7178e0ef33b4b88327676418b4cc3ad61df0f"
+      "commit": "a44529fcb1e1cdc0355e71c42a6048de99b57c34"
     },
     "jquery/jquery.d.ts": {
-      "commit": "95b7178e0ef33b4b88327676418b4cc3ad61df0f"
+      "commit": "a44529fcb1e1cdc0355e71c42a6048de99b57c34"
     },
     "angular-ui-router/angular-ui-router.d.ts": {
       "commit": "95b7178e0ef33b4b88327676418b4cc3ad61df0f"
     },
     "angularjs/angular-resource.d.ts": {
       "commit": "95b7178e0ef33b4b88327676418b4cc3ad61df0f"
+    },
+    "ionic/ionic.d.ts": {
+      "commit": "a44529fcb1e1cdc0355e71c42a6048de99b57c34"
     }
   }
 }
