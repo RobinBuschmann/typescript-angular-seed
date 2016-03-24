@@ -21,6 +21,8 @@ src/app/modules/core/config/config.ts
 test/coverage/
 test/.src/
 test/spec/typings
+test/spec/**/*.js
+test/spec/**/*.js.map
 
 
 # build dir
