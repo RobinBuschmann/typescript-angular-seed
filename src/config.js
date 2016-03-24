@@ -22,11 +22,19 @@ System.config({
           "loader": "ts"
         }
       }
+    },
+    "./base": {
+      "meta": {
+        "./app/*.js": {
+          "format": "register"
+        }
+      }
     }
   },
 
   map: {
-    "angular": "github:angular/bower-angular@1.5.0",
+    "angular": "github:angular/bower-angular@1.5.2",
+    "angular-mocks": "github:angular/bower-angular-mocks@1.5.2",
     "angular-ui-router": "github:angular-ui/ui-router@0.2.18",
     "at": "github:RobinBuschmann/angular-typescript@0.0.15",
     "bootstrap-sass": "github:twbs/bootstrap-sass@3.3.6",
@@ -35,7 +43,10 @@ System.config({
     "ts-runtime": "npm:babel-runtime@5.8.35",
     "typescript": "npm:typescript@1.8.9",
     "github:angular-ui/ui-router@0.2.18": {
-      "angular": "github:angular/bower-angular@1.5.0"
+      "angular": "github:angular/bower-angular@1.5.2"
+    },
+    "github:angular/bower-angular-mocks@1.5.2": {
+      "angular": "github:angular/bower-angular@1.5.2"
     },
     "github:frankwallis/plugin-typescript@4.0.2": {
       "typescript": "npm:typescript@1.8.9"

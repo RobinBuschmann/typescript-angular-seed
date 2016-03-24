@@ -2,8 +2,8 @@
   "version": "v4",
   "repo": "borisyankov/DefinitelyTyped",
   "ref": "master",
-  "path": "src/typings",
-  "bundle": "src/typings/tsd.d.ts",
+  "path": "typings",
+  "bundle": "typings/tsd.d.ts",
   "installed": {
     "angularjs/angular.d.ts": {
       "commit": "95b7178e0ef33b4b88327676418b4cc3ad61df0f"

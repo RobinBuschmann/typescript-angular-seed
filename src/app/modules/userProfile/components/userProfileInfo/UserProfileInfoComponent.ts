@@ -3,7 +3,6 @@
 
 import * as at from 'at';
 import {userProfile} from "../../userProfile";
-import template from "./userProfileInfoTpl.html!ng-template";
 
 /**
  * @ngdoc directive
@@ -15,7 +14,7 @@ import template from "./userProfileInfoTpl.html!ng-template";
 @at.Component({
   moduleName: userProfile.name,
   componentName: 'userProfileInfo',
-  templateUrl: template.templateUrl
+  templateUrl: './app/modules/userProfile/components/userProfileInfo/userProfileInfoTpl.html'
 })
 export class UserProfileInfoComponent {
 

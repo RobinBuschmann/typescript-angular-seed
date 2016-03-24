@@ -6,7 +6,6 @@ import {userProfile} from "../../userProfile";
 import {UserProfileSettingsComponent} from "./../UserProfileSettingsComponent";
 import {UserProfileInfoComponent} from "./../userProfileInfo/UserProfileInfoComponent";
 import {AppService} from "../../../core/services/AppService";
-import template from "./userProfileTpl.html!ng-template";
 
 /**
  * @ngdoc directive
@@ -16,7 +15,7 @@ import template from "./userProfileTpl.html!ng-template";
 @at.Component({
   moduleName: userProfile.name,
   componentName: 'userProfile',
-  templateUrl: template.templateUrl
+  templateUrl: './app/modules/userProfile/components/userProfile/userProfileTpl.html'
 })
 @at.RouteConfig({
   module: userProfile,

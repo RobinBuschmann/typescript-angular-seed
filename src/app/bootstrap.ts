@@ -4,6 +4,9 @@ import app from './app';
 // load app configuration
 import './modules/core/config/config';
 
+// load templates
+import './templates';
+
 // initial component
 import './components/AppComponent';
 

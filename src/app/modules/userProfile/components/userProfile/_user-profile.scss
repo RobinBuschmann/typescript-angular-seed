@@ -2,6 +2,11 @@ user-profile {
 
   .navbar {
     margin-top: -20px;
+
+    .active {
+      background-color: #009688;
+      color: white;
+    }
   }
 
   .avatar-fallback {
