@@ -3,7 +3,7 @@
   "version": "1.1.1",
   "description": "An angular project written in typescript, modularized with system.js and jspm",
   "scripts": {
-    "postinstall": "jspm install && cd src && tsd install && cd ../test && tsd install",
+    "postinstall": "jspm install && cd src && tsd install && cd ../test/spec && tsd install",
     "bundle:ts": "jspm bundle ./src/app/bootstrap ./dist/build.js --minify",
     "bundle:tpl": "node_modules/ng-template-bundler/bin/ngtb './app/**/*.html' -m ts-ng-seed -o app/templates.ts -b ./src -d ./app",
     "bundle:index": "node_modules/usemin-cli/bin/usemin src/index.html -d ./dist > dist/index.html --noprocess --htmlmin --bust",
