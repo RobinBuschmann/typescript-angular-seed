@@ -1,4 +1,5 @@
 import {core} from "../core";
+import * as at from 'at';
 
 @at.Service(core.name, 'appService')
 export class AppService {

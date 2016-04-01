@@ -26,7 +26,7 @@
     "build:test": "tsc --project src --outDir .test --rootDir src",
     "build:prod": "npm run ngconfig:prod && npm run clean:dist && npm run build && npm run bundle:ts && npm run copy && npm run minify:css && npm run bundle:index",
     "watch:css": "onchange 'src/**/*.scss' -- npm run compile:scss",
-    "server:dev": "browser-sync start --server src --files 'src/**/*.css, src/**/*.html, src/**/*.ts'",
+    "server:dev": "browser-sync start --server src --files 'src/**/*.css, src/**/*.html, src/**/*.ts, src/config.js, src/tsconfig.json'",
     "server:prod": "browser-sync start --server dist",
     "serve": "npm run build:dev && npm-run-all -p watch:css server:dev",
     "serve:prod": "npm run build:prod && npm run copy:src && npm run server:prod",
@@ -86,7 +86,7 @@
       "angular-ui-router": "github:angular-ui/ui-router@^0.2.18",
       "at": "github:RobinBuschmann/angular-typescript@^0.0.15",
       "bootstrap-sass": "github:twbs/bootstrap-sass@^3.3.6",
-      "ts": "github:frankwallis/plugin-typescript@^4.0.2",
+      "ts": "github:frankwallis/plugin-typescript@^4.0.5",
       "typescript": "npm:typescript@^1.8.9"
     },
     "devDependencies": {

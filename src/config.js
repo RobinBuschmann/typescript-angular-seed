@@ -29,6 +29,13 @@ System.config({
           "format": "register"
         }
       }
+    },
+    "at": {
+      "meta": {
+        "*.js": {
+          "typings": true
+        }
+      }
     }
   },
 
@@ -39,7 +46,7 @@ System.config({
     "at": "github:RobinBuschmann/angular-typescript@0.0.15",
     "bootstrap-sass": "github:twbs/bootstrap-sass@3.3.6",
     "ng-template": "npm:plugin-ng-template@0.1.1",
-    "ts": "github:frankwallis/plugin-typescript@4.0.2",
+    "ts": "github:frankwallis/plugin-typescript@4.0.5",
     "ts-runtime": "npm:babel-runtime@5.8.35",
     "typescript": "npm:typescript@1.8.9",
     "github:angular-ui/ui-router@0.2.18": {
@@ -48,7 +55,7 @@ System.config({
     "github:angular/bower-angular-mocks@1.5.2": {
       "angular": "github:angular/bower-angular@1.5.2"
     },
-    "github:frankwallis/plugin-typescript@4.0.2": {
+    "github:frankwallis/plugin-typescript@4.0.5": {
       "typescript": "npm:typescript@1.8.9"
     },
     "github:jspm/nodelibs-assert@0.1.0": {
