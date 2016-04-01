@@ -5,13 +5,9 @@
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
     "sourceMap": true,
-    "pretty": true,
-    "noEmit": true
+    "pretty": true
   },
-  "files": [
-    "jspm_packages/github/RobinBuschmann/angular-typescript@0.0.15/dist/at-angular.d.ts",
-    "typings/tsd.d.ts"
-  ],
+  "compileOnSave": false,
   "exclude": [
     "jspm_packages",
     "typings"
