@@ -1,6 +1,8 @@
 # typescript-angular-seed
 
-A prototype for an**angular**project written in**TypeScript**and modularized with**JSPM**and**SystemJS**.
+A prototype for an **angular** project written in **TypeScript** and modularized with **JSPM** and **SystemJS**. 
+It also takes advantage of TypeScript decorators for angular([at](https://github.com/RobinBuschmann/angular-typescript)), 
+which allows an **angular 2**-like implementation of for example services and components.
 
 ## Installation
 
@@ -26,9 +28,9 @@ Creates a build in `dist/` directory. All JS files are bundled  and minifed to `
 npm run build:prod
 ````
 
-## Serve production server
+## Run production server
 
-Runs `npm run build:prod`, copies `src` files to `test` for debugging and runs a server.*Notice: If you want to publish your `dist/` directory you should run `npm run build:prod` again to get rid of the `src` directory within `dist`(or simply delete `src` from `dist)*
+Runs `npm run build:prod`, copies `src` files to `test` for debugging and runs a server. *Notice: If you want to publish your `dist/` directory you should run `npm run build:prod` again to get rid of the `src` directory within `dist`(or simply delete `src` from `dist)*
 
 ````shell
 npm run serve:prod
