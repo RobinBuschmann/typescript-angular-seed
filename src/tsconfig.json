@@ -7,7 +7,7 @@
     "sourceMap": true,
     "pretty": true
   },
-
+  "compileOnSave": false,
   "exclude": [
     "jspm_packages",
     "typings"

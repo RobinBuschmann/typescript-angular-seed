@@ -1,6 +1,3 @@
-///<reference path="../../../../../typings/tsd.d.ts"/>
-///<reference path="../../../../../jspm_packages/github/RobinBuschmann/angular-typescript@0.0.15/dist/at-angular.d.ts"/>
-
 import * as at from 'at';
 import {userProfile} from "../../userProfile";
 
