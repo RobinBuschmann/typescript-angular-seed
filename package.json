@@ -31,7 +31,7 @@
     "build:prod": "npm run ngconfig:prod && npm run clean:dist && npm run build && npm run bundle:ts && npm run copy && npm run minify:css && npm run bundle:index",
     "watch:css": "onchange 'src/**/*.scss' -- npm run compile:scss && npm run copy:css",
     "watch:ts": "onchange 'src/**/*.ts' -- npm run copy:ts",
-    "watch:html": "onchange 'src/**/*.html' -- npm run copy:html",
+    "watch:html": "onchange 'src/**/*.html' -- npm run bundle:tpl",
     "server": "ionic serve",
     "serve": "npm run build:dev && npm-run-all -p watch:ts watch:html watch:css server",
     "copy": "npm run copy:css & npm run copy:config & npm run copy:systemJsProd & npm run copy:systemJsPolyFill & npm run copy:images & npm run copy:fonts",
