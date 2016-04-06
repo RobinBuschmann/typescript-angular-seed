@@ -1,4 +1,7 @@
 
+// The path for our ionicons font files, relative to the built CSS in www/css
+$ionicons-font-path: "../../jspm_packages/github/driftyco/ionic-bower@1.2.4/fonts" !default;
+
 @import "../../jspm_packages/github/driftyco/ionic-bower@1.2.4/scss/ionic";
 
 
@@ -6,3 +9,12 @@
 @import "../modules/userProfile/styles/user-profile";
 
 // components
+
+
+// workarounds
+
+// issue https://github.com/driftyco/ionic/issues/4563
+// For a moment there's two <i>-elements inside tab-item, don't allow both to be shown.
+.tabs .tab-item i:nth-of-type(2) {
+  display: none;
+}

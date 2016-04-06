@@ -6,6 +6,8 @@
     "sourceMap": true
   },
 
+  "compileOnSave": false,
+
   "exclude": [
   ]
 }
