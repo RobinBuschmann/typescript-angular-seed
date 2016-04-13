@@ -28,51 +28,55 @@ System.config({
           "format": "register"
         }
       }
-    },
+    }
+  },
+
+  meta: {
     "at": {
-      "meta": {
-        "*.js": {
-          "typings": true
-        }
-      }
+      "deps": [
+        "reflect-metadata"
+      ]
+    },
+    "reflect-metadata/*": {
+      "format": "global"
     }
   },
 
   map: {
-    "angular": "github:angular/bower-angular@1.5.2",
-    "angular-mocks": "github:angular/bower-angular-mocks@1.5.2",
+    "angular": "github:angular/bower-angular@1.5.3",
+    "angular-mocks": "github:angular/bower-angular-mocks@1.5.3",
     "angular-ui-router": "github:angular-ui/ui-router@0.2.18",
-    "at": "github:RobinBuschmann/angular-typescript@0.0.15",
+    "at": "github:RobinBuschmann/angular-typescript@0.0.20",
     "bootstrap-sass": "github:twbs/bootstrap-sass@3.3.6",
     "ionic": "github:driftyco/ionic-bower@1.2.4",
-    "ng-template": "npm:plugin-ng-template@0.1.1",
+    "reflect-metadata": "npm:reflect-metadata@0.1.3",
     "ts": "github:frankwallis/plugin-typescript@4.0.5",
-    "ts-runtime": "npm:babel-runtime@5.8.35",
-    "typescript": "npm:typescript@1.8.9",
+    "ts-runtime": "npm:babel-runtime@5.8.38",
+    "typescript": "npm:typescript@1.8.10",
     "github:angular-ui/ui-router@0.2.13": {
-      "angular": "github:angular/bower-angular@1.5.2"
+      "angular": "github:angular/bower-angular@1.5.3"
     },
     "github:angular-ui/ui-router@0.2.18": {
-      "angular": "github:angular/bower-angular@1.5.2"
+      "angular": "github:angular/bower-angular@1.5.3"
     },
-    "github:angular/bower-angular-animate@1.5.2": {
-      "angular": "github:angular/bower-angular@1.5.2"
+    "github:angular/bower-angular-animate@1.5.3": {
+      "angular": "github:angular/bower-angular@1.5.3"
     },
-    "github:angular/bower-angular-mocks@1.5.2": {
-      "angular": "github:angular/bower-angular@1.5.2"
+    "github:angular/bower-angular-mocks@1.5.3": {
+      "angular": "github:angular/bower-angular@1.5.3"
     },
-    "github:angular/bower-angular-sanitize@1.5.2": {
-      "angular": "github:angular/bower-angular@1.5.2"
+    "github:angular/bower-angular-sanitize@1.5.3": {
+      "angular": "github:angular/bower-angular@1.5.3"
     },
     "github:driftyco/ionic-bower@1.2.4": {
-      "angular": "github:angular/bower-angular@1.5.2",
-      "angular-animate": "github:angular/bower-angular-animate@1.5.2",
-      "angular-sanitize": "github:angular/bower-angular-sanitize@1.5.2",
+      "angular": "github:angular/bower-angular@1.5.3",
+      "angular-animate": "github:angular/bower-angular-animate@1.5.3",
+      "angular-sanitize": "github:angular/bower-angular-sanitize@1.5.3",
       "angular-ui-router": "github:angular-ui/ui-router@0.2.13",
       "css": "github:systemjs/plugin-css@0.1.20"
     },
     "github:frankwallis/plugin-typescript@4.0.5": {
-      "typescript": "npm:typescript@1.8.9"
+      "typescript": "npm:typescript@1.8.10"
     },
     "github:jspm/nodelibs-assert@0.1.0": {
       "assert": "npm:assert@1.3.0"
@@ -89,7 +93,7 @@ System.config({
     "npm:assert@1.3.0": {
       "util": "npm:util@0.10.3"
     },
-    "npm:babel-runtime@5.8.35": {
+    "npm:babel-runtime@5.8.38": {
       "process": "github:jspm/nodelibs-process@0.1.2"
     },
     "npm:inherits@2.0.1": {
@@ -101,7 +105,7 @@ System.config({
     "npm:process@0.11.2": {
       "assert": "github:jspm/nodelibs-assert@0.1.0"
     },
-    "npm:typescript@1.8.9": {
+    "npm:typescript@1.8.10": {
       "os": "github:jspm/nodelibs-os@0.1.0"
     },
     "npm:util@0.10.3": {
