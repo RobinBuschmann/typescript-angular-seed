@@ -6,22 +6,34 @@ import {core} from "../core";
  * @name app
  * @restrict E
  */
-@at.Component({
-  moduleName: core.name,
-  componentName: 'helloWorld',
+@at.View({
   template: `
     <ion-view view-title="Bla">
-      <ion-content class="has-header">
-          Hello world!
-        </ion-content>
+      <ion-content>
+        <div class="card">
+          <div class="item item-text-wrap">
+            Hello world!
+          </div>
+        </div>
+      </ion-content>
     </ion-view>
   `
 })
-export class HelloWorldComponent implements at.IPreLink{
+export class HelloWorldView {
 
-  onPreLink() {
+  constructor() {
 
-
+    let listStr: string[];
+    let listAnother: Another[];
+    let listAny: Any[] = listAnother;
   }
 
+}
+
+interface Any {
+  name: string;
+}
+
+interface Another extends Any {
+  id: number;
 }

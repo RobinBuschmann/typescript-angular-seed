@@ -11,6 +11,7 @@ import {core} from "../core";
 @at.Component({
   moduleName: core.name,
   componentName: 'niceLabel',
+  transclude: true,
   template: `
     <span ng-transclude ng-style="{color: vm.color || 'blue'}">
     </span>

@@ -14,7 +14,12 @@ import {userProfile} from "../userProfile";
   template: `
      <ion-view>
       <ion-content class="has-header">
-         yeah, user profile settings for "{{vm.userName}}"!
+        <div class="card">
+          <div class="item item-text-wrap">
+            The resolved user name from route configuration: <br/>
+            <strong>{{vm.userName}}</strong>
+          </div>
+        </div>
       </ion-content>
     </ion-view>
 

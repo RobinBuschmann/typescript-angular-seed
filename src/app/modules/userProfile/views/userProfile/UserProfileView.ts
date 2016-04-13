@@ -1,18 +1,11 @@
 import * as at from 'at';
 import {userProfile} from "../../userProfile";
-import {UserProfileSettingsComponent} from "./../UserProfileSettingsComponent";
-import {UserProfileInfoComponent} from "./../userProfileInfo/UserProfileInfoComponent";
 import {AppService} from "../../../core/services/AppService";
+import {UserProfileSettingsComponent} from "../../components/UserProfileSettingsComponent";
+import {UserProfileInfoComponent} from "../../components/userProfileInfo/UserProfileInfoComponent";
 
-/**
- * @ngdoc directive
- * @name userProfile
- * @restrict E
- */
-@at.Component({
-  moduleName: userProfile.name,
-  componentName: 'userProfile',
-  templateUrl: './app/modules/userProfile/components/userProfile/userProfileTpl.html'
+@at.View({
+  templateUrl: './app/modules/userProfile/views/userProfile/userProfileTpl.html'
 })
 @at.RouteConfig({
   module: userProfile,
@@ -40,7 +33,7 @@ import {AppService} from "../../../core/services/AppService";
   ]
 })
 @at.Inject('appService')
-export class UserProfileComponent {
+export class UserProfileView {
 
   appVersion: string;
 

@@ -2,7 +2,7 @@ import * as angular from 'angular';
 import {core} from "../core/core";
 import 'angular-ui-router';
 
-export const userProfile = angular.module('ts-ion-seed.user-profile', [
+export const settings = angular.module('ts-ion-seed.settings', [
   core.name,
   'ui.router',
 ]);
