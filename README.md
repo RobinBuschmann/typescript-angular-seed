@@ -85,7 +85,8 @@ The SystemJS documentation for meta can be found [here](https://github.com/syste
 
 * `at`: This defines the **reflect-metadata** library as a dependency for **angular-typescript** library
 * `reflect-metadata/*` SystemJS scans a library for `require` syntax if _esm_, _csj_ or _amd_ is defined as 
-[format](https://github.com/systemjs/systemjs/blob/master/docs/module-formats.md). reflect-metadata contains
+[format](https://github.com/systemjs/systemjs/blob/master/docs/module-formats.md), if found it tries to load
+the required module in any case. reflect-metadata contains
 a require call. That is why this is set to _global_.
 
 ````src/config.js
