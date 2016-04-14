@@ -1,8 +1,8 @@
 # typescript-angular-seed
 
-A prototype for an **angular** project written in **TypeScript** and modularized with **JSPM** and **SystemJS**. 
+A prototype for a single page application based on **angular**, written in **TypeScript** and modularized with **JSPM** and **SystemJS**. 
 It also takes advantage of TypeScript decorators for angular([at](https://github.com/RobinBuschmann/angular-typescript)), 
-which allows an **angular 2**-like implementation of for example services and components.
+which allows an **angular 2**-like implementation.
 
 ## Installation
 
@@ -44,10 +44,60 @@ Runs `mocha` tests defined in `test/spec` within `karma` and creates code covera
 npm run serve:prod
 ````
 
-  
-## TODOS
+## Documentation
 
-  - migrate from TSD to typings (is currently not possible because of jspm module `plugin-typescript`, which compiles and bundles TypeScript files)
-  - fix broken `build.js.map` of `build.js`
-  - create npm scripts for publishing `dist` to amazon s3
+### SystemJS
 
+Since JSPM removes comments from the SystemJS config file (`src/config.js`) it is important to explain some configurations:
+
+#### packages
+The SystemJS documentation for packages can be found [here](https://github.com/systemjs/systemjs/blob/master/docs/config-api.md#packages)
+
+* `./app` is defined for **development**. 
+* `./src/app` is for **bundling** (JSPM tries to load the files from `./src/app`)
+* `./base` is for **testing** (The base directory of the karma runner is `./base`. 
+When running tests, the ts files are all compiled. That's why the glob looks like `./app/*.js`)
+
+````src/config.js
+  packages: {
+    "./app": {
+      "defaultExtension": "ts"
+    },
+    "./src/app": {
+      "defaultExtension": "ts",
+      "meta": {
+        "*.ts": {
+          "loader": "ts"
+        }
+      }
+    },
+    "./base": {
+      "meta": {
+        "./app/*.js": {
+          "format": "register"
+        }
+      }
+    }
+  },
+````
+#### meta
+The SystemJS documentation for meta can be found [here](https://github.com/systemjs/systemjs/blob/master/docs/config-api.md#meta)
+
+* `at`: This defines the **reflect-metadata** library as a dependency for **angular-typescript** library
+* `reflect-metadata/*` SystemJS scans a library for `require` syntax if _esm_, _csj_ or _amd_ is defined as 
+[format](https://github.com/systemjs/systemjs/blob/master/docs/module-formats.md), if found it tries to load
+the required module in any case. reflect-metadata contains
+a require call. That is why this is set to _global_.
+
+````src/config.js
+  meta: {
+    "at": {
+      "deps": [
+        "reflect-metadata"
+      ]
+    },
+    "reflect-metadata/*": {
+      "format": "global"
+    }
+  },
+````
