@@ -10,6 +10,8 @@ module.exports = function (config) {
       {pattern: '../spec/**/*.js', included: true}
     ],
 
+    singleRun: true,
+
     colors: true,
     logLevel: config.LOG_INFO,
 
@@ -25,8 +27,8 @@ module.exports = function (config) {
       ],
 
       includeFiles: [
-        './jspm_packages/github/angular/bower-angular@1.5.2/angular.js',
-        './jspm_packages/github/angular/bower-angular-mocks@1.5.2/angular-mocks.js'
+        './jspm_packages/github/angular/bower-angular@1.5.3/angular.js',
+        './jspm_packages/github/angular/bower-angular-mocks@1.5.3/angular-mocks.js'
       ],
 
       // Point out where the SystemJS config file is

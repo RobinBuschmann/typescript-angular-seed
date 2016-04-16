@@ -52,7 +52,7 @@
     "test:build:spec": "npm run test:install:typings && npm run test:compile:spec:ts",
     "coverage": "./node_modules/remap-istanbul/bin/remap-istanbul -i ./test/coverage/coverage-final.json -o ./test/coverage -t html",
     "pretest": "npm run test:build:src && npm run test:build:spec",
-    "test": "cd test && ../node_modules/karma/bin/karma start --single-run",
+    "test": "cd test && ../node_modules/karma/bin/karma start",
     "posttest": "npm run coverage && npm run test:clean:src"
   },
   "dependencies": {},
