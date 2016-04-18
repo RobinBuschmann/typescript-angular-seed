@@ -15,18 +15,12 @@
 
 <app></app>
 
-<!-- build:js system-csp-production.js -->
-<script src="jspm_packages/system.src.js"></script>
-<!-- endbuild -->
-<!-- build:js system-polyfills.js --><!-- endbuild -->
-
-<!-- build:js config.js --><script src="config.js"></script><!-- endbuild -->
-
-<!-- build:js build.js --><!-- endbuild -->
-
 <!-- cordova script (this will be a 404 during development) -->
 <script src="cordova.js"></script>
 
+<!-- build:js build.js -->
+<script src="jspm_packages/system.src.js"></script>
+<script src="config.js"></script>
 <script>
 
   System.import('app/bootstrap')
@@ -35,5 +29,7 @@
     });
 
 </script>
+<!-- endbuild -->
+
 </body>
 </html>
