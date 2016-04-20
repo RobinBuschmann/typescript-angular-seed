@@ -46,7 +46,7 @@ import {HelloWorldView} from "../modules/core/views/HelloWorldView";
           
       <ion-side-menu-content>
         <ion-nav-bar class="bar-dark">
-          <ion-nav-back-button>
+          <ion-nav-back-button ng-click="vm.goBack()">
           </ion-nav-back-button>
           
           <ion-nav-title>
@@ -85,13 +85,19 @@ import {HelloWorldView} from "../modules/core/views/HelloWorldView";
   ],
   otherwise: '/'
 })
-@at.Inject('$ionicSideMenuDelegate', 'env')
+@at.Inject('$ionicSideMenuDelegate', '$ionicHistory', 'env')
 export class AppComponent {
 
   constructor(protected $ionicSideMenuDelegate: ionic.sideMenu.IonicSideMenuDelegate,
+              protected $ionicHistory,
               protected _env: typeof env) {
 
     console.log('ENV: ' + _env.name);
+  }
+  
+  goBack() {
+    
+    this.$ionicHistory.goBack();
   }
 
   toggleMenu() {
