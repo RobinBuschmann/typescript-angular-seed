@@ -49,7 +49,7 @@ System.config({
     "at": "github:RobinBuschmann/angular-typescript@0.0.20",
     "bootstrap-sass": "github:twbs/bootstrap-sass@3.3.6",
     "clean-css": "npm:clean-css@3.4.12",
-    "ionic": "github:driftyco/ionic-bower@1.2.4",
+    "ionic": "github:driftyco/ionic-bower@1.3.0",
     "reflect-metadata": "npm:reflect-metadata@0.1.3",
     "ts": "github:frankwallis/plugin-typescript@4.0.5",
     "ts-runtime": "npm:babel-runtime@5.8.38",
@@ -69,7 +69,7 @@ System.config({
     "github:angular/bower-angular-sanitize@1.5.5": {
       "angular": "github:angular/bower-angular@1.5.5"
     },
-    "github:driftyco/ionic-bower@1.2.4": {
+    "github:driftyco/ionic-bower@1.3.0": {
       "angular": "github:angular/bower-angular@1.5.5",
       "angular-animate": "github:angular/bower-angular-animate@1.5.5",
       "angular-sanitize": "github:angular/bower-angular-sanitize@1.5.5",
