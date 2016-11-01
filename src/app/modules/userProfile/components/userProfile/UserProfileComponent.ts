@@ -10,7 +10,7 @@ import {AppService} from "../../../core/services/AppService";
  * @restrict E
  */
 @at.Component({
-  moduleName: userProfile.name,
+  module: userProfile,
   componentName: 'userProfile',
   templateUrl: './app/modules/userProfile/components/userProfile/userProfileTpl.html'
 })
@@ -39,7 +39,7 @@ import {AppService} from "../../../core/services/AppService";
     {when: '/userProfile', then: '/userProfile/info'}
   ]
 })
-@at.Inject('appService')
+@at.Inject(AppService)
 export class UserProfileComponent {
 
   appVersion: string;

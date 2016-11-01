@@ -9,7 +9,7 @@ import {userProfile} from "../userProfile";
  * @param {string} userName Name of the user of this info
  */
 @at.Component({
-  moduleName: userProfile.name,
+  module: userProfile,
   componentName: 'userProfileSettings',
   template: `
      yeah, user profile settings for "{{vm.userName}}"!
@@ -17,7 +17,7 @@ import {userProfile} from "../userProfile";
 })
 export class UserProfileSettingsComponent {
 
-  @at.Attribute()
+  @at.Input()
   userName: string;
 
 }

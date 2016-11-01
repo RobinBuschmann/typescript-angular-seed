@@ -47,7 +47,7 @@ System.config({
     "angular": "github:angular/bower-angular@1.5.3",
     "angular-mocks": "github:angular/bower-angular-mocks@1.5.3",
     "angular-ui-router": "github:angular-ui/ui-router@0.2.18",
-    "at": "github:RobinBuschmann/angular-typescript@0.0.20",
+    "at": "github:RobinBuschmann/angular-typescript@master",
     "bootstrap-sass": "github:twbs/bootstrap-sass@3.3.6",
     "reflect-metadata": "npm:reflect-metadata@0.1.3",
     "ts": "github:frankwallis/plugin-typescript@4.0.5",

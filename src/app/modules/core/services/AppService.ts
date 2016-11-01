@@ -1,7 +1,7 @@
 import {core} from "../core";
 import * as at from 'at';
 
-@at.Service(core.name, 'appService')
+@at.Service(core)
 export class AppService {
 
   private APP_VERSION = 'test';

@@ -2,9 +2,7 @@ import * as at from 'at';
 import app from '../app'
 import {UserProfileComponent} from "../modules/userProfile/components/userProfile/UserProfileComponent";
 import {HelloWorldComponent} from "../modules/core/components/HelloWorldComponent";
-
-// import components, that will be used in the current one
-import '../modules/core/components/NiceLabelComponent';
+import {NiceLabelComponent} from "../modules/core/components/NiceLabelComponent";
 import {env} from "../modules/core/config/config";
 
 
@@ -15,7 +13,8 @@ import {env} from "../modules/core/config/config";
  *
  */
 @at.Component({
-  moduleName: app.name,
+  module: app,
+  directives: [NiceLabelComponent],
   componentName: 'app',
   template: `
 

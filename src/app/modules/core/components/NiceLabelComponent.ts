@@ -9,7 +9,7 @@ import {core} from "../core";
  * @param {string} color Color for text
  */
 @at.Component({
-  moduleName: core.name,
+  module: core,
   componentName: 'niceLabel',
   transclude: true,
   template: `

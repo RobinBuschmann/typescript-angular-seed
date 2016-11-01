@@ -1,5 +1,5 @@
 ///<reference path="../typings/tsd.d.ts"/>
-///<reference path="../jspm_packages/github/RobinBuschmann/angular-typescript@0.0.20/dist/at-angular.d.ts"/>
+///<reference path="../jspm_packages/github/RobinBuschmann/angular-typescript@master/dist/at-angular.d.ts"/>
 
 import * as angular from 'angular';
 import app from './app';

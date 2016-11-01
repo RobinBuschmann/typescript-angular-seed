@@ -7,7 +7,7 @@ import {core} from "../core";
  * @restrict E
  */
 @at.Component({
-  moduleName: core.name,
+  module: core,
   componentName: 'helloWorld',
   template: `
     <div class="container">

@@ -9,7 +9,7 @@ import {userProfile} from "../../userProfile";
  * @param {string} [userName] Name of the user of this info
  */
 @at.Component({
-  moduleName: userProfile.name,
+  module: userProfile,
   componentName: 'userProfileInfo',
   templateUrl: './app/modules/userProfile/components/userProfileInfo/userProfileInfoTpl.html'
 })
